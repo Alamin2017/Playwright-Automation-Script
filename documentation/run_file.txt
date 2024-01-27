@@ -1,0 +1,20 @@
+"context" and "page" fixtures are not supported in "beforeAll" since they are created on a per-test basis.
+If you would like to reuse a single page between tests, create context manually with browser.newContext(). See https://aka.ms/playwright/reuse-page for details.
+If you would like to configure your page before each test, do that in beforeEach hook instead.
+
+
+npx playwright test  --- open all browser  
+npx playwright test --headed --project=chromium ---- open specific browser
+npx playwright test --headed --project=chromium example.spec.js  ---- open specific browser and specific test file
+npx playwright test --headed --project=chromium -g "Validation add to product 1"
+npx playwright test --workers=4
+npx playwright test DataParameter_E2E.spec.js --reporter=allure-playwright
+
+
+How to install playwright :
+
+npm init playwright@latest
+
+npm install -D @playwright/test@latest
+
+npx playwright --version
