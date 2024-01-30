@@ -14,7 +14,7 @@ test.afterEach(async ({page})=>{
     await page.close();
 });
 
-  test('Add Product E2E Test:::',async({page}) => {
+test('Add Product E2E Test:::',async({page}) => {
 
     await expect(page.locator("//a[normalize-space()='Home']")).toHaveText("Home")
     await page.locator("//div[@class='col-sm-9 padding-right']//div[2]//div[1]//div[2]//ul[1]//li[1]//a[1]").click();
@@ -58,4 +58,4 @@ test.afterEach(async ({page})=>{
     await delay(2000);
     await expect(page.locator("//p[normalize-space()='Congratulations! Your order has been confirmed!']")).toContainText('Congratulations! Your order has been confirmed!');
   
-  });
+});
